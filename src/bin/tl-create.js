@@ -407,12 +407,20 @@ switch ((program.format || "pem").toLowerCase()) {
                 {
 	                for(var k = 0; k < files.length; k++)
 	                {
-		                filesJSON[directory].push({
-			                k: files[k].name,
-                            n: files[k].nameID
-		                });
-
-		                fs.writeFileSync(targetDir + "/" + files[k].name, Buffer.from(files[k].content));
+                        try {
+                            fs.writeFileSync(targetDir + "/" + files[k].name, Buffer.from(files[k].content));
+                        
+                            filesJSON[directory].push({
+                                k: files[k].name,
+                                n: files[k].nameID
+                            });
+                        } catch (err) {
+                            if (err.code === 'ENAMETOOLONG') {
+                                console.log(err.message);
+                            } else {
+                                throw err;
+                            }
+                        }
 	                }
                 }
                 
