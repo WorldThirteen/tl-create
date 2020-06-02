@@ -57,7 +57,7 @@ namespace tl_create {
         value: any;
     }
 
-    const mozillaURL = "http://mxr.mozilla.org/mozilla/source/security/nss/lib/ckfw/builtins/certdata.txt?raw=1";
+    const mozillaURL = "https://mxr.mozilla.org/mozilla/source/security/nss/lib/ckfw/builtins/certdata.txt?raw=1";
 
     export class Mozilla {
 
