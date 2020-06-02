@@ -58,7 +58,7 @@ var tl_create;
         MULTILINE_OCTAL: "MULTILINE_OCTAL",
         CK_TRUST: "CK_TRUST"
     };
-    var mozillaURL = "http://mxr.mozilla.org/mozilla/source/security/nss/lib/ckfw/builtins/certdata.txt?raw=1";
+    var mozillaURL = "https://mxr.mozilla.org/mozilla/source/security/nss/lib/ckfw/builtins/certdata.txt?raw=1";
     var Mozilla = /** @class */ (function () {
         function Mozilla(codeFilter) {
             if (codeFilter === void 0) { codeFilter = ["CKA_TRUST_ALL"]; }
